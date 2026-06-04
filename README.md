@@ -15,3 +15,17 @@ Run this command to execute the project:
 ```text
 flutter run
 ```
+
+## Authentication
+
+The user data is mocked, so use one of these users to login:
+
+```text
+email: elio@test.com
+password: test@123
+```
+
+```text
+email: neto@test.com
+password: elio@123
+```

@@ -78,13 +78,6 @@ class LoginFormWidgetState extends State<LoginFormWidget> {
                   !RegExp(Regex.emailRegex).hasMatch(value)
               ? 'Email required.'
               : null,
-          onTap: () async {
-            await Future.delayed(const Duration(milliseconds: 500));
-
-            final object = widget.buttonKey.currentContext?.findRenderObject();
-
-            if (object != null) object.showOnScreen();
-          },
           keyboardType: TextInputType.emailAddress,
           textInputAction: TextInputAction.next,
           prefixIcon: const Icon(Icons.account_circle, color: Palette.darkGrey),
@@ -96,13 +89,6 @@ class LoginFormWidgetState extends State<LoginFormWidget> {
           controller: passwordController,
           validator: (value) =>
               value == null || value.isEmpty ? 'Password required.' : null,
-          onTap: () async {
-            await Future.delayed(const Duration(milliseconds: 500));
-
-            final object = widget.buttonKey.currentContext?.findRenderObject();
-
-            if (object != null) object.showOnScreen();
-          },
           keyboardType: TextInputType.visiblePassword,
           obscureText: obscurePassword,
           hintText: 'Password',
