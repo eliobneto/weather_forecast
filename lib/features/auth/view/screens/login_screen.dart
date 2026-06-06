@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
       }
 
       if (state is AuthSuccessState) {
-        Navigator.of(context).pushNamed('/weather');
+        Navigator.of(context).pushReplacementNamed('/weather');
       }
     },
     builder: (context, state) => Stack(

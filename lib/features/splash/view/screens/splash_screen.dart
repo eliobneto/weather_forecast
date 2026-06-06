@@ -37,9 +37,9 @@ class _SplashScreenState extends State<SplashScreen> {
         bloc: authCubit,
         listener: (context, state) {
           if (state is AuthSuccessState) {
-            Navigator.of(context).pushNamed('/weather');
+            Navigator.of(context).pushReplacementNamed('/weather');
           } else if (state is UnauthenticatedState) {
-            Navigator.of(context).pushNamed('/login');
+            Navigator.of(context).pushReplacementNamed('/login');
           }
         },
       ),
